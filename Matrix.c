@@ -7,7 +7,7 @@ void main()
     {
         for(j=0;j<3;j++)
         {
-            scanf("%d",mat[i][j]);
+            scanf("%d",&mat[i][j]);
         }
     }
     printf("\nMatrix\n");
