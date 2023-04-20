@@ -17,9 +17,10 @@ void main()
             break;
             pos=i+1
         }
-    }
-    if(p==1)
+        if(p==1)
     {
         printf(" %d is found at position=%d",n,pos);
     }
+    }
+    
 }
