@@ -1,7 +1,7 @@
 #include<stdio.h>
 void main()
 {
-    int a[5],i,n,p=0,pos;
+    int a[5],i,n,p=0,pos=0;
     printf("Enter the elemnts in Array=");
     for(i=0;i<5;i++)
     {
@@ -21,10 +21,10 @@ void main()
     }
     if(p==1)
     {
-        printf(" %d is found at position=%d",n,pos);
+    printf(" %d is found at position=%d",n,pos);
     }
     else{
-        printf("%d is not found",n);
+     printf("%d is not found",n);
     }
     
 }
