@@ -15,12 +15,16 @@ void main()
         {
             p=1;
             break;
-            pos=i+1
+            pos=i+1;
         }
-        if(p==1)
+    
+    }
+    if(p==1)
     {
         printf(" %d is found at position=%d",n,pos);
     }
+    else{
+        printf("%d is not found",n);
     }
     
 }
