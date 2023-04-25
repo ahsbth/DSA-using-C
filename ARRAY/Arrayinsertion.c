@@ -49,15 +49,64 @@ void insert()
     int i,pos,ele;
     printf("Enter the position and elements that you want to insert=");
     scanf("%d%d",&p,&ele);
-    for(i=pos-1;i<=sz;i--)
+    for(i=sz-1;i>=pos--)
     {
-        arr[i+1]=arr[i];
+        arr[i]=arr[i-1];
     }
     arr[pos-1]=ele;
 }
 void delete()
-{
+{   
     int i,pos;
     printf("Enter the position for delete=");
-    scanf("%d",p);
+    scanf("%d",pos);
+    if(pos>==sz+1)
+    {
+        printf("Deletion is not possible");
+    }
+    else
+    {
+      for (i = pos - 1; i < num -1; i++)  
+        {  
+            arr[i] = arr[i+1]; // assign arr[i+1] to arr[i]  
+        }  
+    } 
+    display();
+}
+void sort()
+{
+    int i,j,temp;
+    for(i=0;i<sz;i++)
+    {
+        for(j=1;j<sz;j++)
+        {   
+            if(arr[i]>arr[j])
+            temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
+        }
+    }
+    display();
+}
+void search()
+{
+    int i,p=0,n;
+    printf("Enter the no for search in array=");
+    scanf("%d",&n);
+    for(i=0;i<sz;i++)
+    {
+        if(arr[i]==n)
+        {
+            p=1;
+            break;
+        }
+    }
+    if(p==1)
+    {
+        printf("no is found in given array");
+    }
+    else
+    {
+       printf("no is not found in given array"); 
+    }
 }
