@@ -1,6 +1,12 @@
 #include<stdio.h>
+#include<stdlib.h>
 #define N 10
-int main()
+void display();
+void insert();
+void delete();
+void sort();
+void search();
+void main()
 {
     int sz,i;
     int arr[sz],ch;
@@ -11,78 +17,79 @@ int main()
     {
         scanf("%d",&arr[i]);
     }
-    while(0)
+    while(1)
     {
     printf("\n press 1 for display");
     printf("\n press 2 for insert");
     printf("\n press 3 for Delete");
     printf("\n press 4 for Sort");
     printf("\n press 5 for Search");
-    printf("\n press Any for Exit");
+    printf("\n press 6 for exit");
     printf("Enter your choice=");
     scanf("%d",&ch);
     switch(ch)
     {
-        case 1:display();
-        break;
-        case 2:insert();
-        break;
-        case 3:delete();
-        break;
-        case 4:sort();
-        break;
-        case 5:search();
-        break;
-        default:exit(0);
+        case 1:display(arr,sz);
+                  break;
+        case 2:insert(arr,sz);
+                  break;
+        case 3:delete(arr,sz);
+                  break;
+        case 4:sort(arr,sz);
+                  break;
+        case 5:search(arr,sz);
+                  break;
+        case 6:exit(0);
+                  break;
+        default:printf("\ninvalid choice\n");
     }
 
 }
-return(0);
 }
-void display()
+void display(int arr[],int s)
 {
   int i;
   printf("\nArray elements \n");
-  for(i=0;i<sz;i++)
+  for(i=0;i<s;i++)
   {
     printf("%d\t",arr[i]);
   }  
 }
-void insert()
+void insert(int arr[],int s)
 {
     int i,pos,ele;
     printf("Enter the position and elements that you want to insert=");
-    scanf("%d%d",&p,&ele);
-    for(i=sz-1;i>=pos--)
+    scanf("%d%d",&pos,&ele);
+    for(i=s-1;i>=pos;i--)
     {
         arr[i]=arr[i-1];
     }
     arr[pos-1]=ele;
 }
-void delete()
+void delete(int arr[],int s)
 {   
     int i,pos;
     printf("Enter the position for delete=");
-    scanf("%d",pos);
-    if(pos>==sz+1)
+    scanf("%d",&pos);
+    if(pos>=s+1)
     {
         printf("Deletion is not possible");
     }
     else
     {
-      for (i = pos - 1; i < sz -1; i++)  
+      for (i=pos-1;i<s-1;i++)  
         {  
-            arr[i] = arr[i+1]; // assign arr[i+1] to arr[i]  
+            arr[i] = arr[i+1];
         }  
     } 
-    display();
+    display(arr,s);
 }
-void sort()
+void sort(int arr[],int s)
 {
     int i,j,temp;
-    for(i=0;i<sz;i++)
+    for(i=0;i<s;i++)
     {
-        for(j=1;j<sz;j++)
+        for(j=1;j<s;j++)
         {   
             if(arr[i]>arr[j])
             temp=arr[i];
@@ -90,22 +97,22 @@ void sort()
             arr[j]=temp;
         }
     }
-    display();
+    display(arr,s);
 }
-void search()
+void search(int arr[],int s)
 {
-    int i,p=0,n;
+    int i,f=0,n;
     printf("Enter the no for search in array=");
     scanf("%d",&n);
-    for(i=0;i<sz;i++)
+    for(i=0;i<s;i++)
     {
         if(arr[i]==n)
         {
-            p=1;
+            f=1;
             break;
         }
     }
-    if(p==1)
+    if(f==1)
     {
         printf("no is found in given array");
     }
