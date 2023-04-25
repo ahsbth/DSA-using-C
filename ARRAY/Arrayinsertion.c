@@ -1,6 +1,6 @@
 #include<stdio.h>
 #define N 10
-void main()
+int main()
 {
     int sz,i;
     int arr[sz],ch;
@@ -37,6 +37,7 @@ void main()
     }
 
 }
+return(0);
 }
 void display()
 {
