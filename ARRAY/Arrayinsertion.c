@@ -69,7 +69,7 @@ void delete()
     }
     else
     {
-      for (i = pos - 1; i < num -1; i++)  
+      for (i = pos - 1; i < sz -1; i++)  
         {  
             arr[i] = arr[i+1]; // assign arr[i+1] to arr[i]  
         }  
