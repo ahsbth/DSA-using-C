@@ -11,6 +11,8 @@ void main()
     {
         scanf("%d",&arr[i]);
     }
+    while(0)
+    {
     printf("\n press 1 for display");
     printf("\n press 2 for insert");
     printf("\n press 3 for Delete");
@@ -34,6 +36,7 @@ void main()
         default:exit(0);
     }
 
+}
 }
 void display()
 {
