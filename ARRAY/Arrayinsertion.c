@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #define N 10
+
 void display();
 void insert();
 void delete();
@@ -8,11 +9,12 @@ void sort();
 void search();
 void main()
 {
-    int sz,i;
-    int arr[sz],ch;
+    
+    int sz,ch,i;
     printf("Enter the size of arry=");
     scanf("%d",&sz);
-    printf("Enter the  elements for arry of size %d",sz);
+    int arr[sz];
+    printf("Enter the %d elements for arry  ",sz);
     for(i=0;i<sz;i++)
     {
         scanf("%d",&arr[i]);
